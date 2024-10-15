@@ -22,7 +22,7 @@ def add_gaussian_noise(image, mean, std_dev):
     return noisy_image
 
 # Load the image
-img = cv.imread('../../assets/girl_in_beach.jpg', cv.IMREAD_GRAYSCALE)
+img = cv.imread('assets/girl_in_beach.jpg', cv.IMREAD_GRAYSCALE)
 assert img is not None, "File could not be read, check the file path."
 
 # Add Gaussian noise to the image

@@ -1,4 +1,4 @@
-FROM python:3.12.6
+FROM python:3.8-slim
 
 WORKDIR /app
 
@@ -18,6 +18,8 @@ COPY output/ ./output/
 
 RUN python -m pip install --upgrade pip && \
     pip install -r requirements.txt
+
+RUN pip install matplotlib
 
 # Usando uma lista correta para o CMD
 CMD ["xvfb-run", "-a", "python", "app/canny_improved.py"]
