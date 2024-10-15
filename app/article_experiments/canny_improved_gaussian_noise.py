@@ -32,10 +32,12 @@ class ImprovedCanny:
             plt.title(f'Thresholds: {low_threshold}-{high_threshold}')
             plt.xticks([]), plt.yticks([])
 
+        # Mostrar a imagem
+        #plt.show()
         
         plt.tight_layout()
-        plt.savefig('../../assets/thresholds_improved_canny.png')
-        plt.show()
+        plt.savefig('../../output/canny_improved_gaussian_noise/thresholds_improved_canny.png')
+        plt.close()
 
     def gaussian_filter(self,image, kernel_size=5, sigma=1):
         return cv2.GaussianBlur(image, (kernel_size, kernel_size), sigma)
@@ -134,6 +136,7 @@ assert img is not None, "File could not be read, check with os.path.exists()"
 
 canny_operator = ImprovedCanny(image_path='../../assets/girl_in_beach.jpg')
 canny_operator.detect_edges()
+
 # Mostrar resultados
 #cv2.imshow('Imagem Original', img)
 #cv2.imshow('Imagem com Ruído', noisy_img)

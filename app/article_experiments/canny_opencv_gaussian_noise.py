@@ -46,7 +46,10 @@ for i, (low_threshold, high_threshold) in enumerate(thresholds):
     plt.title(f'Canny: {low_threshold}-{high_threshold}')
     plt.xticks([]), plt.yticks([])
 
+# Mostrar a imagem
+#plt.show()
+
 # Save the figure as open_cv_canny.png
 plt.tight_layout()
-plt.savefig('../../assets/open_cv_canny.png')
-plt.show()
+plt.savefig('../../output/canny_opencv_gaussian_noise/open_cv_canny.png')
+plt.close()
