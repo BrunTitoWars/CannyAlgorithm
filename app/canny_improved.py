@@ -97,7 +97,7 @@ def salt_and_pepper_noise(image, salt_prob, pepper_prob):
     return noisy_image
 
 # Carregar imagem
-img = cv2.imread('assets/fruits.png', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('../assets/fruits.png', cv2.IMREAD_GRAYSCALE)
 assert img is not None, "File could not be read, check with os.path.exists()"
 
 # 1. Aplicar filtro gaussiano

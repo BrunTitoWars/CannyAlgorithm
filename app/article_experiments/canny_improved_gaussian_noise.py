@@ -129,7 +129,7 @@ class ImprovedCanny:
         return noisy_image.astype(np.uint8)
 
 
-img = cv2.imread('assets/girl_in_beach.jpg', cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('../../assets/girl_in_beach.jpg', cv2.IMREAD_GRAYSCALE)
 assert img is not None, "File could not be read, check with os.path.exists()"
 
 canny_operator = ImprovedCanny(image_path='../../assets/girl_in_beach.jpg')
